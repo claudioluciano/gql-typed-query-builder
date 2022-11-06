@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "lib": ["es6", "es2017"],
+    "target": "es5",
+    "strict": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "outDir": "build",
+    "typeRoots": ["node_modules/@types"],
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "build", "src/tests"]
+}
