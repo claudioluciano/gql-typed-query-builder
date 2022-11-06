@@ -1,5 +1,5 @@
 {
-  "name": "graphql-typed-query-builder",
+  "name": "gql-typed-query-builder",
   "version": "0.0.1",
   "description": "A simple query builder for GraphQL with TypeScript support",
   "repository": {
