@@ -6,6 +6,22 @@ But the cool part is it's have types :tada:
 
 How to use
 ----------
+
+``` typescript
+const query = graphql<Todo>({
+  name: 'todos',
+  fields: [
+    'id',
+    'name',
+    'complete'
+  ]
+})
+
+console.log(query)
+"query { todos { id name complete } }"
+```
+
+
 [Tests](https://github.com/claudioluciano/gql-typed-query-builder/blob/main/src/tests/intex.test.ts)
 
 
