@@ -4,11 +4,21 @@ A simple helper function to generate GraphQL queries using plain JavaScript Obje
 
 But the cool part is it's have types :tada:
 
+<a href="https://www.npmjs.com/package/gql-typed-query-builder">
+  <img src="https://img.shields.io/npm/dt/gql-typed-query-builder?label=Downloads" alt="downloads" />
+</a>
+
+## Install
+
+`npm install gql-typed-query-builder --save` or `yarn add gql-typed-query-builder`
+
 How to use
 ----------
 
 ``` typescript
-const query = graphql<Todo>({
+import graphql from 'gql-typed-query-builder'
+
+const [query] = graphql<Todo>({
   name: 'todos',
   fields: [
     'id',
