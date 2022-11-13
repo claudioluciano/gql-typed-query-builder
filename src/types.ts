@@ -1,9 +1,13 @@
-type ObjectField<T, K extends keyof any> = {
-  [P in K]: Fields<T>
+interface ObjectField<T, K extends keyof T> {
+  type: T[K]
+  value: Array<Field<T>>
+  fragment: boolean
 }
 
+type KeysOfUnion<T> = T extends T ? keyof T : never
+
 type Field<T> = {
-  [K in keyof T]: T[K] extends object ? ObjectField<T[K], K> : K
+  [K in keyof T]: KeysOfUnion<T> | ObjectField<T, K>
 }[keyof T]
 
 export type Fields<T> = Array<Field<T>>
