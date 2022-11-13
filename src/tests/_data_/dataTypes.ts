@@ -11,7 +11,6 @@ export interface Scalars {
   Int: number
   Float: number
 }
-
 export interface Mutation {
   __typename?: 'Mutation'
   createTodo?: Maybe<Todo>
@@ -35,15 +34,18 @@ export interface MutationToggleTodoArgs {
 export interface MutationUpdateTodoArgs {
   input: TodoInput
 }
-
 export interface Query {
   __typename?: 'Query'
-  todo?: Maybe<Todo>
+  todo?: Maybe<TodoResult>
+  todoByName?: Maybe<Todo>
   todos?: Maybe<Array<Maybe<Todo>>>
 }
-
 export interface QueryTodoArgs {
   todoId?: InputMaybe<Scalars['ID']>
+}
+
+export interface QueryTodoByNameArgs {
+  name?: InputMaybe<Scalars['String']>
 }
 
 export interface Todo {
@@ -58,3 +60,10 @@ export interface TodoInput {
   name?: InputMaybe<Scalars['String']>
   todoId?: InputMaybe<Scalars['ID']>
 }
+
+export interface TodoNotFoundError {
+  __typename?: 'TodoNotFoundError'
+  message: Scalars['String']
+}
+
+export type TodoResult = Todo | TodoNotFoundError
