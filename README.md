@@ -22,7 +22,7 @@ console.log(query)
 ```
 
 
-[Tests](https://github.com/claudioluciano/gql-typed-query-builder/blob/main/src/tests/intex.test.ts)
+More examples: [Tests](https://github.com/claudioluciano/gql-typed-query-builder/blob/main/src/tests/intex.test.ts)
 
 
 Ohh it's based on https://github.com/atulmy/gql-query-builder
